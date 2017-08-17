@@ -110,7 +110,7 @@ version() {
 
 ssh_command() {
   local url="`config_get user`@`config_get host`"
-  local key="`config_get key`"
+  local key=$DEPLOY_KEY
   local forward_agent="`config_get forward-agent`"
   local port="`config_get port`"
   local needs_tty="`config_get needs_tty`"
